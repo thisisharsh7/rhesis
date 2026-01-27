@@ -139,7 +139,20 @@ export default function BehaviorCard({
         </IconButton>
       </Tooltip>
       {metricsCount > 0 && (
-        <Tooltip title="View metrics">
+        <Tooltip
+          title="View metrics"
+          slotProps={{
+            tooltip: {
+              sx: {
+                bgcolor: theme.palette.mode === 'dark' ? 'grey.800' : 'grey.700',
+                color: 'common.white',
+                '& .MuiTooltip-arrow': {
+                  color: theme.palette.mode === 'dark' ? 'grey.800' : 'grey.700',
+                },
+              },
+            },
+          }}
+        >
           <IconButton
             size="small"
             onClick={e => {
