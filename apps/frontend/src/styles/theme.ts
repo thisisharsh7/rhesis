@@ -380,6 +380,25 @@ const getDesignTokens = (mode: PaletteMode) => ({
         },
       },
     },
+    MuiTextField: {
+      defaultProps: {
+        InputLabelProps: {
+          shrink: true,
+        },
+      },
+      styleOverrides: {
+        root: {
+          '& .MuiOutlinedInput-root': {
+            '& input::placeholder': {
+              opacity: 0.7,
+            },
+            '&.Mui-focused input::placeholder': {
+              opacity: 0.5,
+            },
+          },
+        },
+      },
+    },
   },
   chartPalettes: {
     line: ['#50B9E0', '#FD6E12', '#2AA1CE', '#FDD803'], // Rhesis primary blue, orange, CTA blue, yellow
