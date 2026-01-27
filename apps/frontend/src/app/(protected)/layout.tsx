@@ -82,6 +82,7 @@ export default function ProtectedLayout({
               whiteSpace: 'nowrap',
               display: 'block',
               position: 'relative',
+              color: 'text.primary',
             },
             // When drawer is mini/collapsed, ensure headers are truncated properly
             '&.MuiDrawer-docked .MuiListSubheader-root': {
